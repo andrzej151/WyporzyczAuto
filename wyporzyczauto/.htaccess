@@ -1,0 +1,8 @@
+RewriteEngine on
+DirectoryIndex index.php
+RewriteBase /wyporzyczauto/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)/?$ index.php?id1=$1&id2=$2&id3=$3 [L]
+RewriteRule ^([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)/?$ index.php?id1=$1&id2=$2 [L]
+RewriteRule ^([a-zA-Z-_0-9]+)/?$ index.php?id1=$1 [L]
